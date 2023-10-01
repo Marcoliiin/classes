@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let teste1 = "Marcolin" //cria uma variável e da um nome para ela
+
+const teste2 = {        //cria um objeto com vários valores, valores esses que são denominados de atributos
+    firstName: "Gabriel",
+    lastName: "Marcolin",
+    idade: 20,
+    altura: 1.83,
+    fullname: function(){   //Método é uma função armazenada como um atributo
+        return this.firstName + " " + this.lastName
+    },
+    } 
+
+    alert(teste2.idade) //puxa um atributo específico do objeto
+    console.log(teste2)       //puxa o objeto inteiro
+    alert(teste2.fullname()) //puxa a função do objeto
+    
+    class Pessoa {  //Constructor é um método que sempre é usado para criar objetos novos, por exemplo, em exercícios que os valores dos objetos/atributos são definidos pelo usuário 
+     constructor(nome,idade,altura) { 
+     this.nome = nome,
+     this.idade = idade
+     this.altura = altura
+ }
+
+ nascimento(){
+        const data = new Date(); //objeto com a classe Data 
+        return data.getFullYear() - this.idade; //comando getfullyear pega obviamente, o ano atual 
+     }
+}
+
+const pessoa1 = new Pessoa("Marcolin",20,1.83)  //cria um objeto com a classe criada na linha 27
+const pessoa2 = new Pessoa("Igor",19,1.72)
+console.log(pessoa2.nascimento()) //chama a função que tá dentro da pessoa2(objeto) que tá dentro da classe Pessoa 
+
+console.log(pessoa2.nome + " nasceu em " + pessoa2.nascimento() + ",então ele tem " + pessoa2.idade)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
